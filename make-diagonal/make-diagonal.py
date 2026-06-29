@@ -5,4 +5,5 @@ def make_diagonal(v):
     Returns: (n, n) NumPy array with v on the main diagonal
     """
     # Write code here
-    return np.diag(v)
+    n = len(v)
+    return np.array([[v[i] if i == j else 0 for j in range(n)] for i in range(n)])
